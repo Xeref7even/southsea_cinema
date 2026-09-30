@@ -42,9 +42,13 @@ class _MovieListingState extends State<MovieListing> {
             SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.all(12),
-              color: Colors.blueGrey.shade50,
+              color: Colors.black26,
               child: const Text(
                 'Christopher Nolan | 2014',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             SizedBox(height: 20),
