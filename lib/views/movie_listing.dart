@@ -31,13 +31,21 @@ class _MovieListingState extends State<MovieListing> {
             Text(
               'Interstellar',
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 35,
                 fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(height: 12),
             Text(
               'A team of explorers travel through a wormhole in space to search for a new home for humanity.',
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: const EdgeInsets.all(12),
+              color: Colors.blueGrey.shade50,
+              child: const Text(
+                'Christopher Nolan | 2014',
+              ),
             ),
             SizedBox(height: 20),
             Row(
