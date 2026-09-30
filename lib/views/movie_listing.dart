@@ -31,6 +31,15 @@ class MovieListing extends StatelessWidget {
             Text(
               'A team of explorers travel through a wormhole in space to search for a new home for humanity.',
             ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('12A'),
+                Text('169 mins'),
+                Text('Sci-Fi'),
+              ],
+            ),
           ],
         ),
       ),
