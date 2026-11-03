@@ -52,7 +52,7 @@ class _MovieListingState extends State<MovieListing> {
               padding: const EdgeInsets.all(12),
               color: Colors.black26,
               child: Text(
-                '${widget.movie.screeningTime} | £${widget.movie.ticketPrice.toStringAsFixed(2)} per ticket',
+                '${widget.movie.screeningTime} | ${widget.movie.formattedPrice} per ticket',
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
