@@ -23,6 +23,16 @@ class MovieRepository {
         ticketPrice: 8.50,
         imagePath: 'assets/images/jumanji.jpg',
       ),
+      const Movie(
+        id: 'road-to-ninja',
+        title: 'Road to Ninja: Naruto the Movie',
+        synopsis:
+            'Naruto and Sakura are trapped in an alternate world where everyone\'s personality is reversed, and Naruto finally meets the parents he never knew.',
+        ageRating: '12A',
+        screeningTime: 'Tomorrow, 18:15',
+        ticketPrice: 8.00,
+        imagePath: 'assets/images/naruto.jpg',
+      ),
     ];
   }
 }
