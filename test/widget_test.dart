@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:southsea_cinema/main.dart';
 import 'package:southsea_cinema/views/home_view.dart';
 import 'package:southsea_cinema/widgets/movie_card.dart';
+import 'package:southsea_cinema/views/movie_listing.dart';
 
 void useLargeScreen(WidgetTester tester) {
   tester.view.physicalSize = const Size(1200, 2000);
@@ -39,6 +40,31 @@ void main() {
       expect(
         find.widgetWithText(ElevatedButton, 'Book Tickets'),
         findsNWidgets(3),
+      );
+    });
+  });
+
+  group('Booking flow widget tests', () {
+    testWidgets('opens a film listing and adds tickets to the order',
+        (WidgetTester tester) async {
+      useLargeScreen(tester);
+      await tester.pumpWidget(const SouthseaCinemaApp());
+
+      await tester.tap(
+        find.widgetWithText(ElevatedButton, 'Book Tickets').first,
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.byType(MovieListing), findsOneWidget);
+      expect(find.text('Interstellar'), findsOneWidget);
+      expect(find.text('Selected: 1 ticket(s)'), findsOneWidget);
+
+      await tester.tap(find.text('Add To Order'));
+      await tester.pump();
+
+      expect(
+        find.text('Added 1 ticket(s) for Interstellar to your order'),
+        findsOneWidget,
       );
     });
   });
